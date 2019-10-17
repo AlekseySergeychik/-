@@ -19,25 +19,25 @@ int main()
 	tires = 0;
 	cout << "Vashe chislo bolshe 50? (y/n)" << endl;
 	cin >> again;
-
+	srand(static_cast<unsigned int>(time(0)));
 	if(again == 'y')
 		do
 		{
-			srand(static_cast<unsigned int>(time(0)));
+			
 			number = rand() % 50 + 50;
 			++tires;
 			if (number == secretNumber)
-				cout << "Vashe chislo " << number << " ugadanno with" << tires << " popitok" << endl;
+				cout << "Vashe chislo " << number << " ugadanno with " << tires << " popitok" << endl;
 
 		} while (number != secretNumber);
     if (again == 'n')
 			do
 			{
-				srand(static_cast<unsigned int>(time(0)));
+				
 				number = rand() % 50 + 1;
 				++tires;
 				if (number == secretNumber)
-					cout << "Vashe chislo " << number << " ugadanno with" << tires << " popitok" << endl;
+					cout << "Vashe chislo " << number << " ugadanno with " << tires << " popitok" << endl;
 
 			} while (number != secretNumber);
 
